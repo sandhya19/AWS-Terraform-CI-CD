@@ -29,9 +29,9 @@ jobs:
         id: fmt
         run: terraform fmt -check
 
-      - name: Terraform Init
+      - name: Terraform Init (Reconfigure)
         id: init
-        run: terraform init
+        run: terraform init -reconfigure
 
       - name: Terraform Plan
         id: plan
